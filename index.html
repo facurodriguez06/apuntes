@@ -18,8 +18,8 @@
       text-align: center;
     }
     .flashcard {
-      width: 300px;
-      height: 180px;
+      width: 350px;
+      height: 220px;
       perspective: 1000px;
       margin: 20px auto;
     }
@@ -44,13 +44,20 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      padding: 10px;
     }
     .card-back {
-      background-color: #ffe0ac;
+      background-color: #d4f4d4; 
       transform: rotateY(180deg);
+    }
+    .translation {
+      font-weight: 300; 
+      color: #666; 
+      font-size: 1rem; 
     }
     button {
       padding: 10px 20px;
@@ -81,23 +88,23 @@
 
   <script>
     const flashcards = [
-      { verb: 'arrive', opposite: 'leave' },
-      { verb: 'buy', opposite: 'sell' },
-      { verb: 'forget', opposite: 'remember' },
-      { verb: 'start', opposite: 'finish' },
-      { verb: 'turn on', opposite: 'turn off' },
-      { verb: 'push', opposite: 'pull' },
-      { verb: 'lose', opposite: 'win' },
-      { verb: 'borrow', opposite: 'lend' },
-      { verb: 'love', opposite: 'hate' },
-      { verb: 'teach', opposite: 'learn' },
-      { verb: 'send', opposite: 'receive' },
-      { verb: 'break', opposite: 'repair' },
-      { verb: 'download', opposite: 'upload' },
-      { verb: 'catch', opposite: 'miss' },
-      { verb: 'find', opposite: 'lose' },
-      { verb: 'pass', opposite: 'fail' },
-      { verb: 'pick up', opposite: 'drop off' },
+      { verb: "arrive", translation: "llegar", opposite: "leave", oppTranslation: "salir" },
+      { verb: "break", translation: "romper", opposite: "repair", oppTranslation: "reparar" },
+      { verb: "buy", translation: "comprar", opposite: "sell", oppTranslation: "vender" },
+      { verb: "download", translation: "descargar", opposite: "upload", oppTranslation: "subir" },
+      { verb: "find", translation: "encontrar", opposite: "lose", oppTranslation: "perder" },
+      { verb: "forget", translation: "olvidar", opposite: "remember", oppTranslation: "recordar" },
+      { verb: "lend", translation: "prestar", opposite: "borrow", oppTranslation: "pedir prestado" },
+      { verb: "love", translation: "amar / encantar", opposite: "hate", oppTranslation: "odiar" },
+      { verb: "miss", translation: "perder (transporte)", opposite: "catch", oppTranslation: "alcanzar (transporte)" },
+      { verb: "pass", translation: "aprobar", opposite: "fail", oppTranslation: "reprobar" },
+      { verb: "pick up", translation: "recoger", opposite: "drop off", oppTranslation: "dejar (a alguien)" },
+      { verb: "push", translation: "empujar", opposite: "pull", oppTranslation: "tirar" },
+      { verb: "send", translation: "enviar", opposite: "receive", oppTranslation: "recibir" },
+      { verb: "start", translation: "empezar", opposite: "finish", oppTranslation: "terminar" },
+      { verb: "teach", translation: "enseñar", opposite: "learn", oppTranslation: "aprender" },
+      { verb: "turn on", translation: "encender", opposite: "turn off", oppTranslation: "apagar" },
+      { verb: "win", translation: "ganar", opposite: "lose", oppTranslation: "perder" },
     ];
 
     let currentIndex = 0;
@@ -106,8 +113,10 @@
     const card = document.getElementById('card');
 
     function showCard(index) {
-      front.textContent = flashcards[index].verb;
-      back.textContent = flashcards[index].opposite;
+      
+      front.innerHTML = `<strong>${flashcards[index].verb}</strong><br><span class="translation">${flashcards[index].translation}</span>`;
+      
+      back.innerHTML = `<strong>${flashcards[index].opposite}</strong><br><span class="translation">${flashcards[index].oppTranslation}</span>`;
       card.classList.remove('flipped');
     }
 
