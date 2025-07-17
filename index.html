@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verb Opposites Flashcards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+    .flashcard {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 180px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      perspective: 1000px;
+      transition: transform 0.6s;
+    }
+    .flashcard:hover {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      position: absolute;
+      width: 180px;
+      height: 120px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .front {
+      background: #007bff;
+      color: white;
+    }
+    .back {
+      background: #28a745;
+      color: white;
+      transform: rotateY(180deg);
+    }
+    .card-wrapper {
+      position: relative;
+      width: 180px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Flashcard Template -->
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">arrive</div>
+      <div class="back">leave</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">break</div>
+      <div class="back">repair / mend</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">buy</div>
+      <div class="back">sell</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">download</div>
+      <div class="back">upload</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">find</div>
+      <div class="back">lose</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">forget</div>
+      <div class="back">remember</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">lend</div>
+      <div class="back">borrow</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">love</div>
+      <div class="back">hate</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">miss</div>
+      <div class="back">catch</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">pass</div>
+      <div class="back">fail</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">pick up</div>
+      <div class="back">drop off</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">push</div>
+      <div class="back">pull</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">send</div>
+      <div class="back">receive</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">start</div>
+      <div class="back">finish</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">teach</div>
+      <div class="back">learn</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">turn on</div>
+      <div class="back">turn off</div>
+    </div>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="flashcard">
+      <div class="front">win</div>
+      <div class="back">lose</div>
+    </div>
+  </div>
+
+</body>
+</html>
